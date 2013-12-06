@@ -1,0 +1,599 @@
+/*-----------------------
+  BASE CSS
+  ----------------------*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 95%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+html { 
+  height: 101%; 
+}
+
+a {
+  text-decoration: none;
+}
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+p {
+  font-family: "Droid Serif";
+  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.0625em;
+  color: #242424;
+  text-align: justify;
+
+}
+
+
+h2 {
+  color: #0C382F;
+  font-size: 22px;
+  letter-spacing: 0.4545;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  font-family: "Droid Sans";
+}
+
+
+/*-----------------------
+  LAYOUT
+  ----------------------*/
+
+.container {
+  display: block;
+  width: 960px;
+  padding: 14px 15px;
+  margin: 0 auto;
+}
+
+.alternative {
+  padding: 0px;
+}
+
+.intro {
+  width: 460px;
+  padding-top: 80px;
+}
+
+.clear {
+  clear: both;
+}
+
+
+/*-----------------------
+  NAVIGATION
+  ----------------------*/
+#navigation {
+  display: block;
+  height: 35px;
+ 
+}
+
+#navigation ul { 
+  list-style: none; padding: 0px 7px; 
+    margin-left: 0px;
+
+}
+
+#navigation ul li { 
+  display: inline; 
+  float: left; 
+}
+
+#navigation ul li a { 
+  display: block; 
+  padding: 0 8px; 
+  font-size: 18px;
+  letter-spacing: 0.0555em;
+  text-decoration: none;
+  line-height: 35px; 
+  font-weight: bold; 
+  margin-right: 6px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  color: #2b3f59;
+}
+#navigation ul li a:hover { 
+  color: #AB6E20; 
+}
+
+/* hidden fixed navigation */
+#fixedbar { 
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 57px;
+  background: rgba(43,63,89,0.7);
+  z-index: 3;
+  /* font-size: 5px; */
+}
+
+#fixednav { 
+  display: block;
+  width: 400px;
+  margin: auto;
+  padding: 0px 25px;
+  font-size: 7px;
+}
+
+#fixednav li {
+    font-size: 12px;
+ }
+
+#fixednav li a {
+  display: block;
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 60px;
+  text-decoration: none;
+  margin-right: 24px; 
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear; 
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+
+#fixednav li a:hover {
+  color: #EBC798;
+  
+}
+
+
+
+/*-----------------------
+  BODY 
+  ----------------------*/
+
+  .fade-out {
+  background:rgba(255,255,255,1);
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+blockquote p {
+	font-size: 24px;
+}
+
+
+.hero-unit {
+  background:url(../images/ice-break.jpg);
+  height: 662px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.hero-title {
+  background: rgba(0,0,0,.8);
+  color: white;
+  font-family: "Droid Sans";
+  text-align: center;
+  width: 610px;
+  padding: 6px;
+  font-size: 48px;
+  margin-top: 150px;
+  letter-spacing: 1px;
+-webkit-border-top-left-radius:4px;
+-webkit-border-top-right-radius:4px;
+-webkit-border-bottom-right-radius:4px;
+-webkit-border-bottom-left-radius:0px;
+-moz-border-top-left-radius:4px;
+-moz-border-top-right-radius:4px;
+-moz-border-bottom-right-radius:4px;
+-moz-border-bottom-left-radius:0px;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-bottom-right-radius:4px;
+border-bottom-left-radius:0px;
+}
+
+.hero-message {
+  width: 350px;
+  background: rgba(41,52,56,.8);
+  padding: 4px;
+  color: white;
+  font-size: 24px;
+  font-family: Helvetica;
+  letter-spacing: 2px;
+  border-bottom-right-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+
+.para-opening {
+  font-size: 22px;
+  color: #0C382F;
+  font-family: "Droid Serif";
+  letter-spacing: 0.4545;
+}
+
+.intro-body {
+  padding-top: 0px;
+  width: 460px;
+}
+
+.intro-body p {
+  margin: 40px 0 40px 0;
+}
+
+.intro p  {
+	margin-bottom: 10px;
+	
+}
+
+#content {
+  display: block;
+  background: #fff;
+  padding: 14px 20px;
+  font-size: 26px;
+}
+
+
+.human-activity {
+  color: #C06C77;
+  font-weight: bold;
+  font-family: "Droid Serif";
+}
+
+.closing {
+  padding-top: 80px;
+}
+
+.closing p {
+  margin-top: 0;
+}
+
+#vehicle-quote p {
+  margin-top: 0;
+}
+
+#human-quote {
+  margin: 40px 0 40px 0;
+}
+
+.icon {
+  text-align: center;
+}
+
+
+.copyright {
+  float: right;
+  font-size: 12px;
+}
+
+
+
+
+/*-----------------------
+ HISTOGRAMS
+ -----------------------*/
+
+
+.histogram {
+  float: right;
+  margin-right: 60px;
+  display: none;
+  max-width: 24%;
+}
+
+.histogram-2 {
+  float: left;
+  margin-left: 30px;
+  max-width: 24%;
+  font-family: Helvetica;
+  display: none;
+}
+
+.histogram-2 img, .histogram img {
+  max-width: 100%;
+}
+
+.histogram p, .histogram-2 p {
+  font-size: 11px;
+  margin-top: 10px;
+  color: #949494;
+  
+  letter-spacing: 0.0909em;
+}
+
+.histogram a, .histogram-2 a {
+  color: #82C1DE;
+}
+
+.histogram a:hover, .histogram-2 a:hover {
+  color: orange;
+}
+
+
+/*------------------
+  PARALLAX
+  ------------------*/
+
+
+.parallax { 
+  background: url(../images/f-before.jpg) 50% 0 no-repeat fixed; 
+  height: 400px;
+  margin: 0 auto; 
+    width: 100%; 
+    max-width: 1820px; 
+    position: relative; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+
+
+.parallax-message {
+   position: absolute;
+   top: 92px; 
+   width: 100%; 
+   margin: auto;
+   padding: 10px;
+
+}
+
+.parallax-message p {
+  font-size: 42px;
+  color: white;
+  background: rgba(0,0,0,.6);
+  width: 600px;
+  padding: 10px;
+  font-family: Helvetica;
+  margin: auto;
+  text-align: center;
+
+}
+
+.closing a {
+  font-family: "Droid Serif";
+  color: #82C1DE;
+}
+
+
+.closing a:hover {
+  color: orange;
+}
+
+
+
+@media only screen and (min-width: 1000px) and (max-width: 1157px) {
+
+.histogram {
+  margin-right: 40px;
+}
+ 
+#navigation ul {
+  margin-left: 5px;
+}
+
+}
+
+@media only screen and (min-width: 488px) and (max-width: 999px) {
+
+.histogram {
+  float: none;
+  margin: auto;
+  max-width: 295px;
+}
+
+.histogram-2 {
+  float: none;
+  margin: auto;
+  max-width: 295px;
+  padding-bottom: 30px;
+}
+ 
+#navigation ul {
+  margin-left: 2px;
+}
+
+.hero-unit {
+  background:url(../images/ice-break-mobile.jpg);
+  height: 379px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.8);
+}
+
+.hero-title {
+
+  max-width: 460px;
+  font-size: 35px;
+  margin-top: 120px; 
+
+}
+
+.hero-message {
+  max-width: 300px;
+  font-size: 20px;
+  
+}
+
+.parallax { 
+  background: url(../images/bangladesh-floods.jpg) 50% 0 no-repeat fixed; 
+  height: 360px;
+  margin: 0 auto; 
+    width: 100%; 
+    max-width: 1820px; 
+    position: relative; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+
+
+.parallax-message p {
+font-size: 34px;
+width: 420px;
+padding: 6px;
+
+}
+
+.form {
+padding: 20px;
+}
+
+.festival {
+padding-top: 130px;
+width: 37%;
+}
+
+.form input {
+height: 40px;
+width: 290px;
+}
+
+.form textarea {
+padding: 8px;
+width: 286px;
+}
+
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 487px) {
+
+
+  #navigation ul li a {  
+  font-size: 15px;
+  margin-right: 2px;
+}
+
+.histogram {
+  float: none;
+  margin: auto;
+  max-width: 295px;
+  display: block;
+}
+
+.histogram-2 {
+  float: none;
+  margin: auto;
+  max-width: 295px;
+  padding-bottom: 30px;
+  display: block;
+}
+ 
+#navigation ul {
+  margin-left: 2px;
+}
+
+.hero-unit {
+  background:url(../images/polar-bears.jpg);
+  height: 366px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.8);
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.hero-title {
+
+  max-width: 340px;
+  font-size: 24px;
+  margin-top: 90px; 
+
+}
+
+.hero-message {
+  max-width: 280px;
+  font-size: 18px;
+  
+}
+
+.parallax { 
+  background: url(../images/parallax-mobile.jpg) 50% 0 no-repeat fixed; 
+  height: 320px;
+  margin: 0 auto; 
+    width: 100%; 
+    max-width: 1820px; 
+    position: relative; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+
+.parallax-message {
+  padding: 0;
+}
+
+
+
+
+.container {
+display: block;
+width: 960px;
+padding: 14px 10px;
+margin: 0 auto;
+}
+
+.intro {
+width: 340px;
+padding-top: 40px;
+}
+
+.intro-body {
+  width: 340px;
+padding-top: 0px;
+}
+
+
+p {
+font-family: "Droid Serif";
+line-height: 1.5;
+font-size: 14px;
+letter-spacing: 0.0714em;
+color: #242424;
+text-align: justify;
+}
+
+blockquote p {
+font-size: 18px;
+}
+
+.parallax-message p {
+font-size: 24px;
+width: 340px;
+padding: 3px;
+}
+
+.tree-icon {
+  padding-top: 40px;
+}
+
+
+}
