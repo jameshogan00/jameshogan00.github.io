@@ -1,72 +1,90 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
         <meta charset="utf-8">
-        <title>FOOTBALL PITCH</title>
+        <title>Knockbridge Tidy Town</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <!-- SEO -->
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="Knockbridge tidy town website. Knockbridge is a small village within the townland of Ballinlough (Baile an Locha) in County Louth, Ireland. The village takes its name from "Cnoic Bhríde" - Bridget's Hill - reputed to be a site connected with local saint Bridget.">
+        <meta name="author" content="Knockbridge, Louth, Village, Tidy, Community, Projects,">
         <!-- CSS STYLESHEETS -->
         <link href="css/normalize.css" rel="stylesheet" type="text/css">
-        <link href="css/engage.css" rel="stylesheet" type="text/css">
+         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
              
-<body id="body-contact">
-
-
-<div class="fade-out"></div><!-- fade out -->
-
-  
-          <nav id="navigation">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="impacts.html">Impacts</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-
-         <div class="container contact">
-         <h2>We would love to hear from you</h2>
-          <div class="festival form" id="slideDown">
-              <div class="form-inputs" id="form-width">
-                <form id="addUserInfo" action="#" method="post">
-                   <label for="userName">Name:</label>
-                    <input type="text" id="user_name" name="user_name" placeholder="username">
-                    <span id="user_name_error" class="hide">Name must be more than 3 characters!</span>
-                          <br>
-                 <label for="userEmail">Email:</label>
-                    <input type="email" id="user_email" name="user_email" placeholder="email">
-                    <span id="user_email_error" class="hide">Email must be valid!</span>   
-                          <br>
-                    <textarea name="styled-textarea" id="styled" onfocus="this.value=''; setbg('#e5fff3');" onblur="setbg('white')"></textarea>
-                    <br>
-                    <button class="submit" type="submit">SUBMIT</button>
-                </form>
-              </div><!--FORM INPUTS-->
-          </div><!--FESTIVAL FORM-->
-         </div>
-
-
+<body id="contact-body">
+        
   
 
 
 
-    <!--JAVASCRIPT/JQUERY LINKS -->
-    <script src="js/jquery-1.10.2.js"></script>
+<nav role="navigation" class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle page-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar page-icon"></span>
+            <span class="icon-bar page-icon"></span>
+            <span class="icon-bar page-icon"></span>
+        </button>
+    
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse page-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html" class="page-link">About</a></li>
+            <li><a href="history.html" class="page-link">History</a></li>
+            <li><a href="projects.html" class="page-link">Projects</a></li>
+            <li><a href="awards.html" class="page-link">Awards</a></li>
+            <li><a href="contact.html" class="page-link">Contact</a></li>
+            <li><a href="blog.html" class="page-link">Blog</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<section>
+<div class="container contact-container">
+  <div class="contact-body">
+    <div class="contact-heading">
+        <h1>Contact Details</h1>
+    </div>
+    <div class="clear"></div>
+      <div class="contact-text">
+         <p class="marian">Marian Scanlon (committee director) can be contacted on</p>
+         <div class="clear"></div>
+           <div class="contact-digits">
+            <p>Tel: 087-2710716</p>
+            <p>Email: info@knockbridgetidytown.com</p>
+           </div>
+      </div>
+      <div class="clear"></div>
+       <iframe width="450" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ie/maps?q=knockbridge&amp;ie=UTF8&amp;hq=&amp;hnear=Knockbridge,+County+Louth&amp;gl=ie&amp;t=m&amp;z=14&amp;ll=53.971822,-6.486281&amp;output=embed"></iframe><br/>
+       <div class="clear"></div>
+       <small><a href="https://maps.google.ie/maps?q=knockbridge&amp;ie=UTF8&amp;hq=&amp;hnear=Knockbridge,+County+Louth&amp;gl=ie&amp;t=m&amp;z=14&amp;ll=53.971822,-6.486281&amp;source=embed" target="_blank">View Larger Map</a></small>
+  </div><!--CONTACT-BODY -->
+</div><!--CONTACT CONTAINER -->
+</section>
+
+
+
+
+
+   
+
+
+
+ <!--JAVASCRIPT/JQUERY LINKS -->
+    <script src="js/jquery-1.10.1.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
-    <script type="text/javascript">
-function setbg(color)
-{
-document.getElementById("styled").style.background=color
-}
-</script>
+
 
 </body>
 </html>

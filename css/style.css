@@ -1,599 +1,1642 @@
-/*-----------------------
-  BASE CSS
-  ----------------------*/
+/*-------------------------------------------
+BASE CSS
+---------------------------------------------*/
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 95%;
-  font: inherit;
-  vertical-align: baseline;
-  outline: none;
-  -webkit-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: Helvetica;
-}
-html { 
-  height: 101%; 
-}
 
-a {
-  text-decoration: none;
+
+h1, h2, h3 {
+	font-family: "Oswald" Helvetica;
+	text-transform: uppercase;
 }
 
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-ol, ul { list-style: none; }
 
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-strong { font-weight: bold; } 
 
-table { border-collapse: collapse; border-spacing: 0; }
+h3 {
+	font-size: 22px;
+	letter-spacing: .0454em;
+}
 
-* {
-  padding: 0;
-  margin: 0;
+
+
+
+h1 {
+	height: 0;
+}
+
+
+p, ol {
+	font-family: "Open Sans" Sans-Serif Georgia;
+}
+
+
+
+ul {
+	padding-left: 0;
+	}
+
+
+a:hover {
+	cursor: pointer;
+}
+
+
+
+li {
+	list-style-type: none;
+}
+
+ol {
+	padding-left: 0;
+	color: #85004b;
+	font-size: 16px;
+	letter-spacing: .0625em;
+}
+
+ol li {
+	list-style-type: square;
+}
+
+ol li span {
+	color: #484848;
 }
 
 
 p {
-  font-family: "Droid Serif";
-  line-height: 1.5;
-  font-size: 16px;
-  letter-spacing: 0.0625em;
-  color: #242424;
-  text-align: justify;
-
-}
-
-
-h2 {
-  color: #0C382F;
-  font-size: 22px;
-  letter-spacing: 0.4545;
-  margin: 10px 0 10px 0;
-  text-align: center;
-  font-family: "Droid Sans";
-}
-
-
-/*-----------------------
-  LAYOUT
-  ----------------------*/
-
-.container {
-  display: block;
-  width: 960px;
-  padding: 14px 15px;
-  margin: 0 auto;
-}
-
-.alternative {
-  padding: 0px;
-}
-
-.intro {
-  width: 460px;
-  padding-top: 80px;
-}
-
-.clear {
-  clear: both;
-}
-
-
-/*-----------------------
-  NAVIGATION
-  ----------------------*/
-#navigation {
-  display: block;
-  height: 35px;
- 
-}
-
-#navigation ul { 
-  list-style: none; padding: 0px 7px; 
-    margin-left: 0px;
-
-}
-
-#navigation ul li { 
-  display: inline; 
-  float: left; 
-}
-
-#navigation ul li a { 
-  display: block; 
-  padding: 0 8px; 
-  font-size: 18px;
-  letter-spacing: 0.0555em;
-  text-decoration: none;
-  line-height: 35px; 
-  font-weight: bold; 
-  margin-right: 6px;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  color: #2b3f59;
-}
-#navigation ul li a:hover { 
-  color: #AB6E20; 
-}
-
-/* hidden fixed navigation */
-#fixedbar { 
-  display: none;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 57px;
-  background: rgba(43,63,89,0.7);
-  z-index: 3;
-  /* font-size: 5px; */
-}
-
-#fixednav { 
-  display: block;
-  width: 400px;
-  margin: auto;
-  padding: 0px 25px;
-  font-size: 7px;
-}
-
-#fixednav li {
-    font-size: 12px;
- }
-
-#fixednav li a {
-  display: block;
-  float: left;
-  font-size: 13px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 60px;
-  text-decoration: none;
-  margin-right: 24px; 
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  transition: all 0.2s linear; 
-  letter-spacing: 0.0625em;
-  text-transform: uppercase;
-}
-
-#fixednav li a:hover {
-  color: #EBC798;
-  
-}
-
-
-
-/*-----------------------
-  BODY 
-  ----------------------*/
-
-  .fade-out {
-  background:rgba(255,255,255,1);
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-blockquote p {
-	font-size: 24px;
-}
-
-
-.hero-unit {
-  background:url(../images/ice-break.jpg);
-  height: 662px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.8);
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-}
-
-.hero-title {
-  background: rgba(0,0,0,.8);
-  color: white;
-  font-family: "Droid Sans";
-  text-align: center;
-  width: 610px;
-  padding: 6px;
-  font-size: 48px;
-  margin-top: 150px;
-  letter-spacing: 1px;
--webkit-border-top-left-radius:4px;
--webkit-border-top-right-radius:4px;
--webkit-border-bottom-right-radius:4px;
--webkit-border-bottom-left-radius:0px;
--moz-border-top-left-radius:4px;
--moz-border-top-right-radius:4px;
--moz-border-bottom-right-radius:4px;
--moz-border-bottom-left-radius:0px;
-border-top-left-radius:4px;
-border-top-right-radius:4px;
-border-bottom-right-radius:4px;
-border-bottom-left-radius:0px;
-}
-
-.hero-message {
-  width: 350px;
-  background: rgba(41,52,56,.8);
-  padding: 4px;
-  color: white;
-  font-size: 24px;
-  font-family: Helvetica;
-  letter-spacing: 2px;
-  border-bottom-right-radius:3px;
-  border-bottom-left-radius:3px;
-}
-
-
-.para-opening {
-  font-size: 22px;
-  color: #0C382F;
-  font-family: "Droid Serif";
-  letter-spacing: 0.4545;
-}
-
-.intro-body {
-  padding-top: 0px;
-  width: 460px;
-}
-
-.intro-body p {
-  margin: 40px 0 40px 0;
-}
-
-.intro p  {
-	margin-bottom: 10px;
+	font-size: 20px;
+	letter-spacing: .05em;
+	line-height: 1.5;
+	color: #484848;
 	
 }
 
-#content {
-  display: block;
-  background: #fff;
-  padding: 14px 20px;
-  font-size: 26px;
+.clear {
+      clear: both;
+    }
+
+
+/*--------------------------------------------
+  HEADINGS
+----------------------------------------------*/
+
+.page-heading {
+	/* width: 50%; */
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 9px;
+	/* border-bottom: 1px solid #dfdfdf; */
+}
+
+.heading-container p {
+	padding-bottom: 60px;
+	/* text-align: center; */
+	padding-top: 40px;
+}
+
+.heading-title {
+	padding-top: 100px;
+}
+
+.page-heading h1 {
+	margin: 20px 0 0px 0;
+	font-size: 56px;
+	padding-bottom: 90px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: "Oswald";
+	text-transform: uppercase;
+	letter-spacing: 0.0178em;
+	color: #171717;
+}
+
+.page-heading h2 {
+	margin: 4px 0 0px 0;
+	font-size: 40px;
+	/* padding-bottom: 20px; */
+	/* padding-top: 20px; */
+	vertical-align: middle;
+	text-align: center;
+	font-family: "Oswald";
+	letter-spacing: .025em;
+	text-transform: uppercase;
+}
+
+.page-heading h3 {
+	margin: 20px 0 0px 0;
+	font-size: 28px;
+	/* padding-bottom: 20px; */
+	/* padding-top: 20px; */
+	vertical-align: middle;
+	text-align: center;
+	font-family: "Oswald";
+	letter-spacing: .0312em;
+	text-transform: uppercase;
 }
 
 
-.human-activity {
-  color: #C06C77;
-  font-weight: bold;
-  font-family: "Droid Serif";
+.tidy-town-heading h3 {
+	margin-bottom: 40px;
+	color: #85004b;
+	border-bottom: none;
 }
 
-.closing {
-  padding-top: 80px;
+.heading-title h1 {
+	border-bottom: 1px solid #dfdfdf;
 }
 
-.closing p {
-  margin-top: 0;
+
+.section-headings h2, .history-header h2 {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 41px;
+	letter-spacing: .0363em;
+	
+	font-kerning: normal;
+	color: #000;
 }
 
-#vehicle-quote p {
-  margin-top: 0;
+/*--------------------------------------
+FOOTER
+---------------------------------------*/
+
+footer {
+	background: #111;
+	border-top: 5px solid #727272;
 }
 
-#human-quote {
-  margin: 40px 0 40px 0;
+.footer-list {
+	float: left;
 }
 
-.icon {
-  text-align: center;
+.footer-list img {
+	padding-top: 35px;
 }
 
+
+.footer-list ul {
+	padding: 0px 0 30px 15px;
+}
+
+.footer-list li a {
+	font-size: 14px;
+	text-decoration: none;
+	color: #6d6d6d;
+	font-family: "Open Sans";
+}
+
+
+.footer-list a:hover {
+	color: #e4ea0f;
+}
 
 .copyright {
-  float: right;
-  font-size: 12px;
+	color: #727272;
+	float: right;
+	padding-top: 191px;
+	font-size: 12px;
+	letter-spacing: .06333em;
+}
+
+
+/*--------------------------------------
+NAVIGATION
+---------------------------------------*/
+
+.navbar {
+	margin-bottom: 0;
+	position: absolute;
+	background: transparent;
+	border-color: transparent;
+	text-transform: uppercase;
+	font-family: "Oswald";
+	letter-spacing: .0714em;
+}
+
+.navbar-toggle {
+	background-color: transparent;
+	float: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #e4ea0f;
+}
+
+.navbar-default .navbar-toggle {
+	background: #000;
+}
+
+
+.navbar-default .navbar-toggle:hover {
+	background: #000;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: transparent;
 }
 
 
 
 
-/*-----------------------
- HISTOGRAMS
- -----------------------*/
+/*--------------------------------------
+LAYOUT
+---------------------------------------*/
 
-
-.histogram {
-  float: right;
-  margin-right: 60px;
-  display: none;
-  max-width: 24%;
+.container {
+	width: 66%;
+	margin: auto;
 }
 
-.histogram-2 {
-  float: left;
-  margin-left: 30px;
-  max-width: 24%;
-  font-family: Helvetica;
-  display: none;
+.history-container {
+	width: 70%;
 }
 
-.histogram-2 img, .histogram img {
-  max-width: 100%;
-}
-
-.histogram p, .histogram-2 p {
-  font-size: 11px;
-  margin-top: 10px;
-  color: #949494;
-  
-  letter-spacing: 0.0909em;
-}
-
-.histogram a, .histogram-2 a {
-  color: #82C1DE;
-}
-
-.histogram a:hover, .histogram-2 a:hover {
-  color: orange;
-}
-
-
-/*------------------
-  PARALLAX
-  ------------------*/
-
-
-.parallax { 
-  background: url(../images/f-before.jpg) 50% 0 no-repeat fixed; 
-  height: 400px;
-  margin: 0 auto; 
-    width: 100%; 
-    max-width: 1820px; 
-    position: relative; 
-    box-shadow: 0 0 5px rgba(0,0,0,0.8);
-}
-
-
-.parallax-message {
-   position: absolute;
-   top: 92px; 
-   width: 100%; 
-   margin: auto;
-   padding: 10px;
-
-}
-
-.parallax-message p {
-  font-size: 42px;
-  color: white;
-  background: rgba(0,0,0,.6);
-  width: 600px;
-  padding: 10px;
-  font-family: Helvetica;
-  margin: auto;
-  text-align: center;
-
-}
-
-.closing a {
-  font-family: "Droid Serif";
-  color: #82C1DE;
-}
-
-
-.closing a:hover {
-  color: orange;
+.container-about {
+	width: 50%;
 }
 
 
 
-@media only screen and (min-width: 1000px) and (max-width: 1157px) {
 
-.histogram {
-  margin-right: 40px;
-}
- 
-#navigation ul {
-  margin-left: 5px;
+.contact-container {
+	width: 60%;
+	/* text-align: center; */
 }
 
+.projects-container {
+	margin-bottom: 80px;
 }
 
-@media only screen and (min-width: 488px) and (max-width: 999px) {
-
-.histogram {
-  float: none;
-  margin: auto;
-  max-width: 295px;
+.history-container {
+	width: 793px;
+	margin-bottom: 140px;
 }
 
-.histogram-2 {
-  float: none;
-  margin: auto;
-  max-width: 295px;
-  padding-bottom: 30px;
-}
- 
-#navigation ul {
-  margin-left: 2px;
+.timeline-container {
+  width: 80%;
+  padding-top: 100px;
 }
 
+.container-about {
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+.timeline-container {
+  width: 80%;
+  padding-top: 100px;
+}
+
+
+
+
+
+/*--------------------------------------
+HERO UNIT/ABOUT PAGE
+---------------------------------------*/
 .hero-unit {
-  background:url(../images/ice-break-mobile.jpg);
-  height: 379px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.8);
-}
-
-.hero-title {
-
-  max-width: 460px;
-  font-size: 35px;
-  margin-top: 120px; 
-
-}
-
-.hero-message {
-  max-width: 300px;
-  font-size: 20px;
-  
-}
-
-.parallax { 
-  background: url(../images/bangladesh-floods.jpg) 50% 0 no-repeat fixed; 
-  height: 360px;
-  margin: 0 auto; 
-    width: 100%; 
-    max-width: 1820px; 
-    position: relative; 
-    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+	width: 100%;
+	/* padding-bottom: 20px; */
 }
 
 
-.parallax-message p {
-font-size: 34px;
-width: 420px;
-padding: 6px;
+
+.hero-content {
+	width: 100%;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: middle;
+	background-size: 100%;
+	background-position: 50% 88%;
+	background-repeat: no-repeat;
+	background-image: url(../images/macnamees.jpg); 
+}
+
+
+.heading {
+	background: url('../images/church-logo.png') no-repeat;
+	width: 100%;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: middle;
+	background-size: 50%;
+	background-position: 53% 40%;
+	background-repeat: no-repeat; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: center;
+}
+
+
+.content-inner, .heading-inner {
+	display: block;
+	height: 0;
+}
+
+.heading-inner {
+	padding-top: 38.6%;
+	padding-bottom: 7.5%;
+}
+
+
+.more-info:hover {
+	cursor: pointer;
+}
+
+
+
+.about-heading {
+	width: 50%;
+	padding-top: 70px;
+}
+
+.about-heading img {
+	margin-bottom: 0;
+}
+
+
+.container-about p {
+	text-align: justify;
+}
+
+.container-about img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 20px;
+	max-width: 100%;
+}
+
+.about-section a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #85004b;
+}
+
+
+/*--------------------------------------------
+  HISTORY SECTION 
+----------------------------------------------*/
+
+
+#history-tile p {
+	display: block;
+	width: 380px;
+	height: 200px;
+	background-image: url(../images/history-sprite.jpg);
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+	margin-bottom: 0;	
+	margin-top: 1px;
+}
+
+#history-tile:hover {
+	cursor: pointer;
+}
+
+
+#history-tile a {
+	color: #fff;
+	opacity: 0;
+	position: absolute;
+	top: 60%;
+	left: 27%;
+	
+}
+
+#history-tile a:hover {
+	text-decoration: none;
+}
+
+
+#history-tile .gaa p {
+	background-position:  0px 0px; 
+	display: block; 
+}
+
+#history-tile .gaa p:hover {
+	background-position:  0px -200px;
+	display: block; 
+}
+
+#history-tile .stephenstown-house p {
+	background-position:  -380px 0px; 
+	display: block; 
+}
+
+#history-tile .stephenstown-house p:hover {
+	background-position:  -380px -200px;
+	display: block; 
+}
+
+#history-tile .cuch-stone p {
+	background-position:  -760px 0px; 
+	display: block; 
+}
+
+#history-tile .cuch-stone p:hover {
+	background-position:  -760px -200px;
+	display: block; 
+}
+
+#history-tile .marys-church p {
+	background-position:  380px 0px; 
+	display: block; 
+}
+
+#history-tile .marys-church p:hover {
+	background-position:  380px -200px;
+	display: block; 
+}
+
+.hist-second {
+	margin-top: 2px;
+}
+
+#break-history {
+	margin-top: 1px;
+}
+
+
+.modal-body img {
+	float: right;
+	padding: 0 0 10px 20px;
+	max-width: 100%;
+}
+
+
+.modal-body p {
+	font-size: 14px;
+	letter-spacing: 0.0714em;
+	text-align: justify;
+}
+
+
+.gaa-section {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.history-heading {
+	padding-top: 30px;
+	padding-bottom: 0px;
+}
+
+
+/*--------------------------------------------
+  PROJECTS SECTION 
+----------------------------------------------*/
+
+
+  .timeline {
+	position: absolute;
+	top: 3em;
+	left: 50%;
+	width: 8px;
+	margin-left: -4px;
+	height: 100%;
+	z-index: 10;
+	background: rgba(194,87,148,0.1);
+}
+
+.project-timeline-container {
+	width: 960px;
+}
+
+
+.content-area {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+
+.event-left {
+	border-top: 1px solid rgba(135,0,75,.3);
+	margin-right: 1rem;
+	margin-bottom: 3rem;
+	width: 50%;
+	position: relative;
+	padding-right: 8%;
+}
+
+.event-left:before {
+	position: absolute;
+	top: -5px;
+	left: 99.18%;
+	content: " ";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border: 1px solid #85004b;
+	background: #85004b;
+}
+
+.event-right:before {
+	position: absolute;
+	top: -5px;
+	left: -4px;
+	content: " ";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border: 1px solid #85004b;
+	background: #85004b;
 
 }
 
-.form {
-padding: 20px;
+
+.event-right {
+	border-top: 1px solid rgba(135,0,75,.3);
+	left: 50%;
+	text-align: right;
+	width: 50%;
+	position: relative;
+	padding-left: 8%;
 }
 
-.festival {
-padding-top: 130px;
-width: 37%;
+
+.beyond2014 {
+	vertical-align: middle;
 }
 
-.form input {
-height: 40px;
-width: 290px;
+.beyond2014 img {
+	opacity: .1;
+	text-align: center;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-.form textarea {
-padding: 8px;
-width: 286px;
+
+.beyond-2014-container {
+	width: 350px;
+	margin: auto;
+	padding-bottom: 80px;
 }
 
+.beyond-2014-container h3 {
+	text-align: center;
 }
 
+.details {
+	padding-right: 20px;
+	width: 100%;
+}
+
+.details p {
+	/* width: 19%; */
+	font-size: 14px;
+	text-align: justify;
+	letter-spacing: .0714em;
+	max-width: 100%;
+}
+
+.details img {
+	max-width: 100%;
+}
+
+
+.project-timeline {
+	position: relative;
+overflow: hidden;
+}
+
+
+.event-right p {
+	max-width: 100%;
+}
+
+/*--------------------------------------------
+  AWARDS
+----------------------------------------------*/
+
+.award-paragraph {
+	padding: 80px 0 80px 0;
+}
+
+.awards-midsection {
+	background-color: #00d665;
+}
+
+.awards-midsection li {
+	color: #005e2c;
+}
+
+.stars-midsection {
+	text-align: center;
+	padding: 15px 0 15px 0;
+	width: 100%;
+}
+
+.award-wins {
+	width: 50%;
+	padding-right: 10%;
+	padding-left: 10%;
+	float: left;
+}
+
+.award-paragraph a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #85004b;
+}
+
+.win-grid img {
+	margin: auto;
+	display: block;
+}
+
+.environmental-wins {
+	width: 50%;
+	padding-left: 10%;
+	float: left;
+	/* margin-top: 30px; */
+	padding-right: 10%;
+}
+
+
+.win-grid {
+	padding: 80px 0 80px 0;
+	margin: auto;
+}
+
+.win-grid h2 {
+	text-align: center;
+	font-size: 26px;
+	letter-spacing: 0.0384em;
+	color: #000;
+}
+
+.win-grid li {
+	padding-bottom: 10px;
+}
+
+.award-container {
+	width: 100%;
+	text-align: center;
+}
+
+
+/*--------------------------------------------
+  CONTACT DETAILS
+----------------------------------------------*/
+
+
+#contact-body {
+	background-image: url(../images/sign-post.jpg);
+	background-repeat: no-repeat;
+	height: 100%;
+	
+}
+
+ .contact-text p {
+	font-size: 14px;
+	letter-spacing: .0714;
+}
+
+.contact-digits {
+	margin-bottom: 20px;
+	text-align: right;
+}
+
+.contact-digits p {
+	font-size: 14px;	
+	font-family: "Oswald";
+}
+
+.marian {
+	color: #85004b;
+	font-weight: bold;
+	font-family: "Oswald";
+	text-transform: uppercase;
+}
+
+
+
+.contact-heading {
+	float: right;
+}
+
+.contact-text {
+	float: right;
+	padding-top: 20px;
+}
+
+.contact-heading h1 {
+	float: right;
+	margin-right: 0;
+	margin-top: 80px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	font-size: 34px;
+	letter-spacing: 0.0294em;
+}
+
+
+iframe {
+	float: right;
+	 -moz-box-shadow:    1px 1px 1px #000;
+  -webkit-box-shadow: 1px 1px 1px #000;
+  box-shadow:      1px 1px 1px #000;   
+}
+
+small a {
+	float: right;
+	text-decoration: none;
+	font-weight: bold;
+color: #85004b;
+font-size: 16px;
+padding-bottom: 20px;
+font-family: "Oswald";
+	text-transform: uppercase;
+	letter-spacing: .0625em;
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------
+  MEDIA QUERIES 
+--------------------------------------------------------------------------------------------------------------*/
+
+/*---- MOBILE ----------------------------------------------------------------------------------------------------------------------*/
 
 @media only screen and (min-width: 0px) and (max-width: 487px) {
 
 
-  #navigation ul li a {  
-  font-size: 15px;
-  margin-right: 2px;
+/*-------------------------------------------
+BASE CSS
+---------------------------------------------*/
+
+ul {
+	margin: 0 0 0 0;
+	padding-top: 0px;
+	padding-left: 0;
+	display: inline;
 }
 
-.histogram {
-  float: none;
-  margin: auto;
-  max-width: 295px;
-  display: block;
+nav {
+	display: inline;
 }
-
-.histogram-2 {
-  float: none;
-  margin: auto;
-  max-width: 295px;
-  padding-bottom: 30px;
-  display: block;
-}
- 
-#navigation ul {
-  margin-left: 2px;
-}
-
-.hero-unit {
-  background:url(../images/polar-bears.jpg);
-  height: 366px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.8);
-    background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.hero-title {
-
-  max-width: 340px;
-  font-size: 24px;
-  margin-top: 90px; 
-
-}
-
-.hero-message {
-  max-width: 280px;
-  font-size: 18px;
-  
-}
-
-.parallax { 
-  background: url(../images/parallax-mobile.jpg) 50% 0 no-repeat fixed; 
-  height: 320px;
-  margin: 0 auto; 
-    width: 100%; 
-    max-width: 1820px; 
-    position: relative; 
-    box-shadow: 0 0 5px rgba(0,0,0,0.8);
-}
-
-.parallax-message {
-  padding: 0;
-}
-
-
-
-
-.container {
-display: block;
-width: 960px;
-padding: 14px 10px;
-margin: 0 auto;
-}
-
-.intro {
-width: 340px;
-padding-top: 40px;
-}
-
-.intro-body {
-  width: 340px;
-padding-top: 0px;
-}
-
 
 p {
-font-family: "Droid Serif";
-line-height: 1.5;
-font-size: 14px;
-letter-spacing: 0.0714em;
-color: #242424;
-text-align: justify;
+	font-size: 14px;
+	letter-spacing: .0714em;
+	line-height: 1.5;
 }
 
-blockquote p {
-font-size: 18px;
+   .container-about {
+ 	width: 75%;
+ }
+
+ ol {
+	padding-left: 0;
+	font-family: "Open Sans";
+	color: #85004b;
+	font-size: 14px;
+	letter-spacing: .0714em;
 }
 
-.parallax-message p {
-font-size: 24px;
-width: 340px;
-padding: 3px;
+h3 {
+font-size: 16px;
+letter-spacing: .0625em;
 }
 
-.tree-icon {
-  padding-top: 40px;
+/*-------------------------------------------
+FOOTER
+---------------------------------------------*/
+
+.footer-list li a {
+	font-size: 11px;
+
+}
+
+.footer-list li {
+	margin-bottom: -2px;
+}
+
+footer .container {
+	width: 95%;
+}
+
+.copyright, .footer-list {
+	float: none;
+}
+
+.copyright {
+	padding-top: 5px;
+	font-size: 8px;
+}
+
+
+/*-------------------------------------------
+NAVBAR
+---------------------------------------------*/
+
+.navbar {
+	margin-bottom: 0;
+	position: absolute;
+	background: transparent;
+	border-color: transparent;
+	text-transform: uppercase;
+	font-family: "Oswald";
+	letter-spacing: .0714em;
+}
+
+
+
+.navbar-default .navbar-toggle {
+	border-color: none;
+}
+
+.navbar-toggle {
+	position: relative;
+	float: right;
+	margin-right: 15px;
+	padding: 7px 6px;
+	margin-top: 3px;
+	margin-bottom: 8px;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+
+.nav>li>a {
+	position: relative;
+	display: block;
+	padding: 7px 0px;
+}
+
+.navbar-nav>li>a {
+	padding-top: 2px;
+	padding-bottom: 10px;
+	line-height: 20px;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: none;
+	margin-right: 57px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #e4ea0f;
+}
+
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: transparent;
+	background: #000;
+}
+
+.navbar-nav {
+	margin: 0.5px 0px;
+}
+
+.navbar-default .page-toggle, .navbar-default .page-toggle:hover  {
+	background: #fff;
+}
+
+
+
+.navbar-default .navbar-toggle .page-icon {
+	background: #85004b;
+}
+
+.navbar-default .navbar-nav li .page-link {
+	color: #85004b;
+}
+
+.navbar-default .page-collapse {
+	background: #fff;
+}
+
+
+
+/*-------------------------------------------
+HERO UNIT/ABOUT
+---------------------------------------------*/
+
+
+
+.hero-content {
+	width: 100%;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: middle;
+	background-size: 100%;
+	background-position: 50% 88%;
+	background-repeat: no-repeat;
+	background-image: url(../images/macnameees-mobile.jpg); 
+}
+
+.heading-inner {
+	padding-top: 60.6%;
+	padding-bottom: 9.5%;
+}
+
+/*-------------------------------------------
+LAYOUT
+---------------------------------------------*/
+
+
+.background-container {
+  padding: 20px;
+  background-image: none;
+}
+
+
+.history-container {
+	width: 268px;
+	margin-bottom: 80px;
+}
+
+.contact-container {
+	width: 100%;
+	text-align: left;
+}
+
+.project-timeline-container {
+	width: 99%;
+	padding-left: 7px;
+}
+
+.projects-container {
+	margin-bottom: 0px;
+	width: 90%;
+}
+
+.heading-container {
+	width: 95%;
+	text-align: justify;
+}
+
+.beyond-2014-container {
+	width: 90%;
+	margin-left: 21px;
+	padding-bottom: 60px;
+}
+
+/*-------------------------------------------
+HEADINGS
+---------------------------------------------*/
+
+
+
+.section-headings h2 {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 18px;
+	letter-spacing: 0.055em;
+}
+
+.section-headings h3 {
+	font-size: 18px;
+    letter-spacing: 0.055em;
+}
+
+
+
+#history-heading {
+	width: 100%;
+}
+
+.contact-heading {
+	float: none;
+}
+
+.contact-heading h1 {
+	float: none;
+	margin-right: 0;
+	margin-top: 80px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	font-size: 19px;
+	letter-spacing: 0.0294em;
+	margin-left: 0;
+}
+
+.page-heading h1 {
+	font-size: 24px;
+	letter-spacing: .0416em;
+	padding-bottom: 45px;
+}
+
+.beyond-2014-container h3 {
+	text-align: left;
+}
+
+
+/*-------------------------------------------
+HISTORY
+---------------------------------------------*/
+
+
+
+#history-tile p {
+	display: block;
+	width: 230px;
+	height: 120px;
+	background-image: url(../images/history-sprite-mobile.jpg);
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+	margin-bottom: 0;	
+}
+
+#history-tile:hover {
+	cursor: pointer;
+}
+
+.gaa-section {
+	width: 50%;
+	float: none;
+	text-align: center;
+	margin-bottom: 2px;
+}
+
+
+
+#history-tile a {
+	color: #fff;
+	opacity: 0;
+	position: absolute;
+	top: 60%;
+	left: 27%;
+}
+
+#history-tile a:hover {
+	text-decoration: none;
+}
+
+
+#history-tile .gaa p {
+	background-position:  0px 0px; 
+	display: block; 
+}
+
+#history-tile .gaa p:hover {
+	background-position:  0px -120px;
+	display: block; 
+}
+
+#history-tile .stephenstown-house p {
+	background-position:  -230px 0px; 
+	display: block; 
+}
+
+#history-tile .stephenstown-house p:hover {
+	background-position:  -230px -120px;
+	display: block; 
+}
+
+#history-tile .cuch-stone p {
+	background-position:  -460px 0px; 
+	display: block; 
+}
+
+#history-tile .cuch-stone p:hover {
+	background-position:  -460px -120px;
+	display: block; 
+}
+
+#history-tile .marys-church p {
+	background-position:  230px 0px; 
+	display: block; 
+}
+
+#history-tile .marys-church p:hover {
+	background-position:  230px -120px;
+	display: block; 
+}
+
+
+.modal-body img {
+	float: right;
+	padding: 0 0 10px 0px;
+	max-width: 100%;
+}
+
+.modal-body p, #history-tile p  {
+	text-align: justify;
+	font-size: 12px;
+	letter-spacing: .0833em;
+}
+
+
+/*-------------------------------------------
+AWARDS
+---------------------------------------------*/
+
+
+.award-wins, .environmental-wins {
+	float: none;
+	width: 100%;
+}
+
+
+.environmental-wins {
+	padding-left: 0;
+	margin-top: 30px;
+	padding-right: 0%;
+}
+
+.award-wins {
+	margin-bottom: 20px;
+	margin: auto;
+	
+}
+
+.awards-midsection li {
+	color: #005e2c;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: .0714em;
+}
+
+.award-paragraph {
+	padding: 40px 15px 40px 15px;
+}
+
+.awards-heading p {
+	padding-top: 0;
+	text-align: justify;
+}
+
+
+/*-------------------------------------------
+CONTACT
+---------------------------------------------*/
+
+#contact-body {
+	background-image: url(../images/sign-post-cell.jpg);
+	background-position: 50% 29%;
+}
+
+
+iframe {
+	display: none;
+}
+
+
+
+.contact-text {
+	float: none;
+}
+
+
+
+small a {
+	float: none;
+}
+
+
+.contact-digits, .contact-text, small a {
+	text-align: left;
+}
+
+.contact-digits p {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+/*-------------------------------------------
+PROJECTS
+---------------------------------------------*/
+
+
+
+ .timeline {
+	position: absolute;
+	top: 3em;
+	left: 5px;
+	width: 8px;
+	margin-left: -4px;
+	height: 100%;
+	z-index: 10;
+	background: rgba(194,87,148,0.1);
+}
+
+.event-left, .event-right {
+	position: relative;
+	border-top: 1px solid rgba(122,122,122,0.4);
+	margin-right: 5%;
+	margin-bottom: 3rem;
+}
+
+.event-left {
+	width: 100%;
+}
+
+.event-right {
+	width: 50%;
+}
+
+.event-right {
+	border-top: 1px solid rgba(122,122,122,0.4);
+	left: -3px;
+	text-align: left;
+	padding-left: 15px;
+	width: 100%;
+	position: relative;
+}
+
+
+.event-right:before {
+	left: -5px;
+}
+
+
+
+.beyond2014 img {
+	display: none;
+}
+
+.beyond2014 {
+	text-align: left;
+
+}
+
+
+
+.event-left:before {
+	left: -8px;
+}
+
+.details {
+	padding-left: 10px;
+}
+
+.event-right .details {
+	padding-left: 0;
+}
+
+.heading-container p {
+	padding-bottom: 30px;
+	text-align: justify;
+	padding-top: 0px;
+}
+
+.projects-container p {
+	text-align: justify;
 }
 
 
 }
+
+/*---- TABLET ----------------------------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (min-width: 488px) and (max-width: 767px) {
+
+/*-------------------------------------------
+BASE CSS
+---------------------------------------------*/
+
+p {
+	font-size: 16px;
+	letter-spacing: .0625em;
+	line-height: 1.5;
+	color: #484848;
+}
+
+button:active {
+	background: #000;
+}
+   
+/*-------------------------------------------
+FOOTER
+---------------------------------------------*/
+
+.footer-list li a {
+	font-size: 14px;
+}
+
+/*-------------------------------------------
+NAVBAR
+---------------------------------------------*/
+
+.navbar {
+	margin-bottom: 0;
+	position: absolute;
+	background: transparent;
+	border-color: transparent;
+	text-transform: uppercase;
+	font-family: "Oswald";
+	letter-spacing: .0714em;
+}
+
+.navbar-toggle {
+	background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: none;
+	background: #000;
+}
+
+.navbar-default .page-toggle, .navbar-default .page-toggle:hover  {
+	background: #fff;
+}
+
+
+
+
+.navbar-default .navbar-toggle .page-icon {
+	background: #85004b;
+}
+
+.navbar-default .navbar-toggle .page-icon {
+	background: #85004b;
+}
+
+.navbar-default .navbar-nav li .page-link {
+	color: #85004b;
+}
+
+
+.navbar-default .navbar-nav>li>a {
+	color: #e4ea0f;
+}
+
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: transparent;
+	background: #000;
+}
+
+.navbar-default .navbar-collapse:active, .navbar-default .navbar-form:active {
+	border-color: transparent;
+	background: #000;
+}
+
+.navbar-default .page-collapse {
+	background: #fff;
+}
+
+
+/*-------------------------------------------
+LAYOUT
+---------------------------------------------*/
+
+
+
+ .container-about {
+ 	width: 60%;
+ }
+
+ .projects-container {
+	margin-bottom: 0px;
+	width: 90%;
+}
+
+.history-container {
+	width: 420px;
+	margin-bottom: 80px;
+}
+
+.project-timeline-container {
+	width: 99%;
+}
+
+.beyond-2014-container {
+	width: 100%;
+	margin-left: 41px;
+	padding-bottom: 60px;
+}
+
+
+/*-------------------------------------------
+HEADINGS
+---------------------------------------------*/
+
+#history-heading {
+	width: 100%;
+}
+
+
+.about-heading {
+	width: 50%;
+	padding-top: 70px;
+}
+
+.page-heading {
+	padding-bottom: 10px;
+}
+
+
+
+.about-heading h2 {
+	margin-top: 15px;
+	font-size: 28px;
+	letter-spacing: 0.0357em;
+}
+
+.contact-heading h1 {
+	float: none;
+	margin-right: 0;
+	margin-top: 80px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	font-size: 34px;
+	letter-spacing: 0.0294em;
+	margin-left: 0;
+}
+
+.beyond-2014-container h3 {
+	text-align: left;
+}
+
+
+/*-------------------------------------------
+HISTORY
+---------------------------------------------*/
+
+.gaa-section {
+	width: 50%;
+	float: none;
+	text-align: center;
+	margin-bottom: 2px;
+}
+
+/*-------------------------------------------
+PROJECTS
+---------------------------------------------*/
+
+.timeline {
+	position: absolute;
+	top: 3em;
+	left: 14px;
+	width: 8px;
+	margin-left: -4px;
+	height: 378%;
+	z-index: 10;
+	background: rgba(194,87,148,0.1);
+}
+
+.event-left, .event-right {
+	position: relative;
+	border-top: 1px solid rgba(122,122,122,0.4);
+	margin-right: 5%;
+	margin-bottom: 3rem;
+}
+
+.event-left {
+	width: 100%;
+}
+
+.event-right {
+	width: 50%;
+}
+
+.event-right:before {
+	left: -5px;
+}
+
+.event-right {
+	border-top: 1px solid rgba(122,122,122,0.4);
+	left: -3px;
+	text-align: left;
+	padding-left: 15px;
+	width: 100%;
+	position: relative;
+}
+
+
+.event-left:before {
+	left: -8px;
+}
+
+.details {
+	padding-left: 10px;
+}
+
+.event-right .details {
+	padding-left: 0;
+}
+
+.beyond2014 img {
+	display: none;
+}
+
+.beyond2014 {
+	text-align: left;
+}
+
+
+
+
+/*-------------------------------------------
+AWARDS
+---------------------------------------------*/
+
+
+.environmental-wins, .award-wins {
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+/*-------------------------------------------
+CONTACT
+---------------------------------------------*/
+
+
+#contact-body {
+	background-image: none;
+}
+
+.contact-heading {
+	float: none;
+}
+
+
+
+.contact-text {
+	float: none;
+}
+
+.contact-digits {
+	text-align: left;
+}
+
+iframe {
+	float: none;
+	width: 340px;
+}
+
+small a {
+	float: none;
+
+}
+
+
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 899px) {
+
+
+.background-container {
+  padding: 20px;
+}
+
+
+
+#contact-body {
+ background-image: none;
+}
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 900px) and (max-width: 1150px) {
+
+
+
+.background-container {
+  padding: 20px;
+}
+
+#projects-body h2 {
+  font-size: 30px;
+}
+
+
+#contact-body {
+  background-image: url(../images/sign-post-mobile.jpg);
+}
+
+.contact-container {
+  width: 85%;
+}
+
+
+
+}
+
+
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1044px) {
+
+.project-timeline-container {
+	max-width: 988px;
+	width: 725px;
+}
+
+
+}
+
